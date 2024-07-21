@@ -1,7 +1,6 @@
 from flask import Flask,render_template, redirect, request
 from db import noteTablesCreate
-from db import Note
-from db import readAllNotes
+from db import Note,readAllNotes
 from db import readNoteById
 from db import updateNote
 from db import createNote
