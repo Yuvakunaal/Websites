@@ -1,0 +1,2 @@
+00:42:57	Maheswaran Govindaraju:	https://getbootstrap.com/docs/5.3/getting-started/introduction/
+01:49:30	Maheswaran Govindaraju:	10 minutes recess. 5 minutes header of login and all logged in pages of notes app.

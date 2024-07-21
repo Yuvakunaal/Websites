@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe</title>
+    <link  rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        td{
+            width:50px;
+            height:50px;
+        }
+    </style>
+</head>
+<body onload="clearboard();">
+    <div>
+        <a href="..">All Web-Apps</a>
+    </div>
+    <h2 align="center">Tic-Tac-Toe</h2>
+    <div class="container text-center border bg-warning">
+        <br>
+        <p><strong>Turn :</strong> 
+            <span id="turn" class="text-primary"><strong>X</strong></span>
+        </p>
+        <p><strong>Score :</strong> 
+            <span id="score" class="text-primary"><strong>Playing...</strong></span>
+        </p>
+        <p>
+            <button class="btn btn-secondary" onclick="clearboard()">Start fresh</button>
+        </p>
+        <table class="table table-bordered border-dark" style="width:30%;height:100px;" align="center" border="1">
+            <tr>
+                <td id="box1" onclick="play(event)"></td>
+                <td id="box2" onclick="play(event)"></td>
+                <td id="box3" onclick="play(event)"></td>
+            </tr>
+            <tr>
+                <td id="box4" onclick="play(event)"></td>
+                <td id="box5" onclick="play(event)"></td>
+                <td id="box6" onclick="play(event)"></td>
+            </tr>
+            <tr>
+                <td id="box7" onclick="play(event)"></td>
+                <td id="box8" onclick="play(event)"></td>
+                <td id="box9" onclick="play(event)"></td>
+            </tr>
+        </table>
+    </div>
+    <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>

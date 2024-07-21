@@ -1,0 +1,33 @@
+{% extends 'master/master-logged-in.html' %}
+{% block title %}Search Vendor{% endblock %}
+{% block main %}
+<br>
+<h3 align="center">Search Vendor</h3>
+<div class="container">
+    <form method="POST">
+        <div class="mb-3 form-group">
+            <label for="name" class="form-label"><strong>Name</strong></label>
+            <input type="text" class="form-control border-secondary" id="name" name="name" placeholder="type here vendor name....">
+        </div>
+        <div class="mb-3 form-group">
+            <label for="location" class="form-label"><strong>Location</strong></label>
+            <input type="text" class="form-control border-secondary" id="location" name="location" placeholder="type here vendor location....">
+        </div>
+        <div class="mb-3 form-group">
+            <label for="type" class="form-label"><strong>Type</strong></label>
+            <input type="text" class="form-control border-secondary" id="type" name="type" placeholder="type here vendor type....">
+        </div>
+        <div class="mb-3 form-group">
+            <label for="rating" class="form-label"><strong>Rating</strong></label>
+            <input type="text" class="form-control border-secondary" id="rating" name="rating" placeholder="type here vendor rating....">
+        </div>
+        <table align="center">
+        <tr>
+            <td>
+                <button type="submit" class="btn btn-outline-dark">Search</button>
+            </td>
+        </tr>
+        </table>
+    </form>
+</div>
+{% endblock %}

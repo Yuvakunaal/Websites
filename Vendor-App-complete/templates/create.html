@@ -1,0 +1,40 @@
+{% extends 'master/master-logged-in.html' %}
+{% block title %}Add Vendor{% endblock %}
+{% block main %}
+<br>
+<h3 align="center">Add Vendor</h3>
+<div class="container">
+    <form method="POST" onsubmit="return willcreate();">
+        <div class="mb-3 form-group">
+            <label for="name" class="form-label"><strong>Name</strong></label>
+            <input type="text" class="form-control border-secondary" id="name" name="name" placeholder="type here vendor name..." required>
+        </div>
+        <div class="mb-3 form-group">
+            <label for="location" class="form-label"><strong>Location</strong></label>
+            <input type="text" class="form-control border-secondary" id="location" name="location" placeholder="type here vendor location..." required>
+        </div>  
+        <div class="mb-3 form-group">
+            <label for="type" class="form-label"><strong>Type</strong></label>
+            <input type="text" class="form-control border-secondary" id="type" name="type" placeholder="type here vendor type..." required>
+        </div>  
+        <div class="mb-3 form-group">
+            <label for="rating" class="form-label"><strong>Rating(1-5)</strong></label>
+            <input type="text" class="form-control border-secondary" id="rating" name="rating" placeholder="type here vendor rating..." required>
+        </div>  
+        <table align="center">
+        <tr>
+            <td>
+                <button type="submit" class="btn btn-outline-dark">Create</button>
+            </td>
+        </tr>
+        </table>
+    </form>
+</div>
+{% endblock %}
+{% block script %}
+<script type="text/javascript">
+    function willcreate(){
+        return confirm("Are you sure to create?");
+    }
+</script>
+{% endblock %}

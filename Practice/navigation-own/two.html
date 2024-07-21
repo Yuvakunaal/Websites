@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        .navbar {
+            background-color: lightslategray;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .navbar .title {
+            color: rgb(0, 0, 0);
+            padding-left: 10px;
+            font-size: 25px;
+            cursor: pointer;
+        }
+        .navbar ul {
+            list-style-type: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar li {
+            margin: 0 10px;
+        }
+        .navbar li a {
+            display: block;
+            color: rgb(0, 0, 0);
+            text-align: center;
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .navbar .menu-icon {
+            display: none;
+            font-size: 30px;
+            cursor: pointer;
+            color: rgb(0, 0, 0);
+        }
+        .section {
+            display: grid;
+            place-items: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container button {
+            width: 100px;
+            height: 100px;
+        }
+        .navbar .title a{
+            color:rgb(0, 0, 0);
+            text-decoration: none;
+        }
+        @media (max-width: 768px) {
+            .navbar ul {
+                border: 2px solid grey;
+                display: none;
+                flex-direction: column;
+                width: 60%;
+                background-color:antiquewhite;
+                position: absolute;
+                top: 58px;
+                right: 0;
+            }
+            .navbar ul.active {
+                display: flex;
+            }
+            .navbar li {
+                margin: 10px 0;
+                text-align: center;
+            }
+            .navbar .menu-icon {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="title"><a href="index.html">Website</a></div>
+        <span class="menu-icon" onclick="toggleMenu()">&#9776;</span>
+        <ul>
+            <li><a href="one.html">One</a></li>
+            <li><a href="two.html">Two</a></li>
+            <li><a href="three.html">Three</a></li>
+            <li><a href="four.html">Four</a></li>
+            <li><a href="..">Back</a></li>
+        </ul>
+    </div>
+    <br>
+    <h3 align="center"><u>Two</u></h3>
+    <div>
+        <table align="center" border="1" width="80%" cellspacing="0" cellpadding="10">
+            <thead>
+                <tr align="center">
+                    <th>SNO</th>
+                    <th>Name</th>
+                    <th>Roll</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr align="center">
+                    <td>1</td>
+                    <td>sai</td>
+                    <td>33</td>
+                </tr>
+                <tr align="center">
+                    <td>2</td>
+                    <td>shiva</td>
+                    <td>34</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script>
+        function toggleMenu() {
+            var ul = document.querySelector('.navbar ul');
+            ul.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!-- Div-centering & sections making -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin:0;
+            padding:0;
+        }
+        section{
+            display:grid;
+            min-height: 100vh;
+        }
+        .container1{
+            background-color: aquamarine;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container2{
+            background-color: rgb(240, 255, 127);
+            display: flex;
+            justify-content:end;
+            align-items:end;
+        }
+        .container3{
+            background-color: rgb(200, 127, 255);
+            display: flex;
+            justify-content:start;
+            align-items:start;
+        }
+        .container4{
+            background-color: rgb(255, 127, 155);
+            display: flex;
+            justify-content:space-between;
+            align-items:center;
+        }
+        button{
+            color:white;
+            background-color: brown;
+            height:200px;
+            width:200px;
+        }
+    </style>
+</head>
+<body>
+    <a href=".">back</a>
+    <section>
+        <div class="container1">
+            <button>Hello</button>
+        </div>
+    </section>
+    <section>
+        <div class="container2">
+            <button>Hello</button>
+        </div>
+    </section>
+    <section>    
+        <div class="container3">
+            <button>Hello</button>
+        </div>
+    </section>
+    <section>    
+        <div class="container4">
+            <button>Hello</button>
+            <button>Hello</button>
+        </div>
+    </section>
+</body>
+</html>

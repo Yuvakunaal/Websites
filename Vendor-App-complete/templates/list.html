@@ -1,0 +1,46 @@
+{% extends 'master/master-logged-in.html' %}
+{% block title %}Vendor List{% endblock %}
+{% block main %}
+<br><br>
+<div class="container">
+    <div class="table-responsive">
+        <table class="table table-bordered border-dark">
+            <thead class="table-secondary border-dark">
+                <tr align="center">
+                    <th>SNO</th>
+                    <th>Name</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for vendor in vendors %}
+                <tr align="center">
+                    <td>{{ vendor.SNO }}</td>
+                    <td>{{ vendor.name }}</td>
+                    <td>
+                        <a href="/view/{{ vendor.id }}" class="btn btn-success">view</a>
+                        <a href="/edit/{{ vendor.id }}" class="btn btn-primary">edit</a>
+                        <form method="POST" action="/delete" onsubmit="return willdelete();" style="display:inline;">
+                            <input type="hidden" name="id" value="{{ vendor.id }}">
+                            <button type="submit" class="btn btn-danger">delete</button>
+                        </form>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}
+{% block script %}
+<script type="text/javascript">
+    function willdelete(){
+        if (!confirm("Are you sure to delete ?")){
+            return false;
+        }
+        else{
+            return true;
+        }
+    }
+</script>
+{% endblock %}

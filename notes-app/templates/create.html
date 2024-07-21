@@ -1,0 +1,45 @@
+{% extends 'master/master-logged-in.html' %} {% block title %}Add Notes{%
+endblock %} {% block main %}
+<br />
+<h3 align="center">Add Notes</h3>
+<div class="container">
+  <form method="POST" onsubmit="return willcreate();">
+    <div class="mb-3 form-group">
+      <label for="title" class="form-label">Title</label>
+      <input
+        type="text"
+        class="form-control"
+        id="title"
+        name="title"
+        placeholder="type here notes title...."
+      />
+    </div>
+    <div class="mb-3 form-group">
+      <label for="notes" class="form-label">Description</label>
+      <textarea
+        class="form-control"
+        id="title"
+        name="notes"
+        placeholder="type here notes description...."
+      ></textarea>
+    </div>
+    <table align="center">
+      <tr>
+        <td>
+          <button type="submit" class="btn btn-outline-dark">Create</button>
+        </td>
+      </tr>
+    </table>
+  </form>
+</div>
+{% endblock %} {% block script %}
+<script type="text/javascript">
+  function willcreate() {
+    if (!confirm("Are you sure to create ?")) {
+      return false;
+    } else {
+      return true;
+    }
+  }
+</script>
+{% endblock %}
