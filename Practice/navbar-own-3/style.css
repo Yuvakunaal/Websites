@@ -1,0 +1,173 @@
+:root {
+    --color-1: #0f1016;
+    --text-color: #f0f0f0;
+    --accent-color: #006aff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 12pt;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding:0;
+}
+
+nav {
+    height: 100vh; 
+    width: 250px; 
+    background-color: var(--color-1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    transition: left 0.3s ease;
+}
+
+.links-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 20px;
+}
+
+nav a {
+    padding: 20px 0px 20px 0px;
+    font-size: 1.3em;
+    text-decoration: none;
+    color: var(--text-color);
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+nav a:hover {
+    background-color:#6a6868;
+}
+
+nav .title {
+    padding-top: 20px;
+    font-size: 35px; 
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+nav .title:hover {
+    background-color: var(--color-1);
+    color: darksalmon;
+}
+
+svg {
+    cursor: pointer;
+    fill: var(--color-1);
+}
+
+nav svg{
+    cursor: pointer;
+    fill: var(--text-color);
+}
+
+#sidebar-active {
+    display: none;
+}
+
+.open-sidebar-button,
+.close-sidebar-button {
+    display: none; 
+}
+
+.table-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+table {
+    width: 90%;
+    border-collapse: collapse; 
+}
+
+table, th, td {
+    border: 2px solid black;
+}
+
+th, td {
+    padding: 20px;
+    text-align: center;
+}
+
+th {
+    background-color: var(--color-1);
+    color: var(--text-color);
+}
+
+h4{
+    margin-left: 70px;
+}
+
+.btn{
+    font-size: 15px;
+    padding: 8px;
+    color:orange;
+    background-color: black;
+    border: 1px solid white;
+    border-radius: 20%;
+}
+
+.btn:hover{
+    background-color: grey;
+}
+
+@media (max-width: 2500px) {
+    main{
+        min-height: 100vh;
+        margin-left: 0;
+    }
+    nav {
+        left: -250px; 
+    }
+
+    .open-sidebar-button {
+        display: block; 
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 15;
+    }
+
+    .close-sidebar-button {
+        display: block; 
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    #sidebar-active:checked ~ nav {
+        left: 0; 
+    }
+
+    #sidebar-active:checked ~ #overlay {
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: rgba(134, 132, 135, 0.5);
+        z-index: 9;
+    }
+    .menu{
+        position: sticky;
+    }
+    
+}
