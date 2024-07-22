@@ -16,8 +16,8 @@ endblock %} {% block main %} <br /><br />
           <td>{{ note.SNO }}</td>
           <td>{{ note.title }}</td>
           <td>
-            <a href="/view/{{ note.id }}" class="btn btn-success">view</a>
-            <a href="/edit/{{ note.id }}" class="btn btn-primary">edit</a>
+            <a href="/list/view/{{ note.id }}" class="btn btn-success">view</a>
+            <a href="/list/edit/{{ note.id }}" class="btn btn-primary">edit</a>
             <form
               method="POST"
               action="/delete"
