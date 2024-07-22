@@ -18,8 +18,8 @@
                     <td>{{ vendor.SNO }}</td>
                     <td>{{ vendor.name }}</td>
                     <td>
-                        <a href="/view/{{ vendor.id }}" class="btn btn-success">view</a>
-                        <a href="/edit/{{ vendor.id }}" class="btn btn-primary">edit</a>
+                        <a href="/list/view/{{ vendor.id }}" class="btn btn-success">view</a>
+                        <a href="/list/edit/{{ vendor.id }}" class="btn btn-primary">edit</a>
                         <form method="POST" action="/delete" onsubmit="return willdelete();" style="display:inline;">
                             <input type="hidden" name="id" value="{{ vendor.id }}">
                             <button type="submit" class="btn btn-danger">delete</button>
