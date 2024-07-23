@@ -1,0 +1,53 @@
+{% extends 'master/master-logged-in.html' %} {% block title %}Edit note{%
+endblock %} {% block main %}
+<a href="/list" class="btn">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="30"
+    height="30"
+    fill="currentColor"
+    class="bi bi-arrow-left-circle"
+    viewBox="0 0 16 16"
+  >
+    <path
+      fill-rule="evenodd"
+      d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5z"
+    />
+  </svg>
+</a>
+<h3 align="center">Edit Notes</h3>
+<div class="container">
+  <form method="POST" onsubmit="return willedit();">
+    <div class="mb-3 form-group">
+      <label for="title" class="form-label">Title</label>
+      <input
+        type="text"
+        class="form-control"
+        id="title"
+        name="title"
+        placeholder=""
+        value="{{ note.title }}"
+      />
+    </div>
+    <div class="mb-3 form-group">
+      <label for="notes" class="form-label">Description</label>
+      <textarea class="form-control" id="notes" name="notes" placeholder="">
+{{ note.notes }}</textarea
+      >
+    </div>
+    <h1 align="center">
+      <button type="submit" class="btn btn-outline-dark">Update</button>
+    </h1>
+  </form>
+</div>
+{% endblock %} {% block script %}
+<script type="text/javascript">
+  function willedit() {
+    if (!confirm("Are you sure to update ?")) {
+      return false;
+    } else {
+      return true;
+    }
+  }
+</script>
+{% endblock %}

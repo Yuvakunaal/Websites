@@ -1,0 +1,33 @@
+{% extends 'master/master-logged-in.html' %} {% block title %}Search Notes{%
+endblock %} {% block main %}
+<br />
+<h3 align="center">Search Notes</h3>
+<div class="container">
+  <form method="POST">
+    <div class="mb-3 form-group">
+      <label for="title" class="form-label">Title</label>
+      <input
+        type="text"
+        class="form-control"
+        id="title"
+        name="title"
+        placeholder="type here notes title...."
+        autofocus
+      />
+    </div>
+
+    <div class="mb-3 form-group">
+      <label for="notes" class="form-label">Description</label>
+      <textarea
+        class="form-control"
+        id="notes"
+        name="notes"
+        placeholder="type here notes description...."
+      ></textarea>
+    </div>
+    <h1 align="center">
+      <button type="submit" class="btn btn-outline-dark">Search</button>
+    </h1>
+  </form>
+</div>
+{% endblock %}
