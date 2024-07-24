@@ -1,0 +1,10 @@
+notes backend app : API End Points 
+       Task           verb              Noun                            handler 
+                      Request Method    URL
+                                        baseUrl: https://<server> 
+    1. create         POST              /notes                          notes_create()
+    2. read by id     GET               /notes/<id>                     notes_read_by_id(id)            
+    3. read all       GET               /notes                          notes_read_all() 
+    4. update         PUT               /notes/<id>                     notes_update(id) 
+    5. delete         DELETE            /notes/<id>                     notes_delete(id) 
+    6. search         POST              /notes_search                   notes_search() 
